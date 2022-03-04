@@ -53,6 +53,11 @@ android {
 
 dependencies {
 
+    implementation(project(Screen.MAIN))
+    implementation(project(Screen.HOME))
+    implementation(project(Screen.CATEGORIES))
+    implementation(project(Screen.COLLECTION))
+    implementation(project(Feature.ONBOARDING))
     implementation(Lib.AndroidX.APP_COMPAT)
     implementation(Lib.AndroidX.CORE_KTX)
     implementation(Lib.AndroidX.MATERIAL)

@@ -3,6 +3,9 @@ package ru.maksonic.rdpodcast
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
+/**
+ * @Author: maksonic on 04.03.2022
+ */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

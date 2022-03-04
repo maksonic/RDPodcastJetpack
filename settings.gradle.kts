@@ -13,4 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "RDPodcast"
-include ':app'
+include (":app")
+include(":core")
+include(":data")
+include(":domain")

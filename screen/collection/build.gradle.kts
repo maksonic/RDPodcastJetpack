@@ -13,7 +13,7 @@ android {
     }
 
     buildTypes {
-        getByName(BuildType.RELEASE) {
+        getByName(BuildType.TYPE) {
             isMinifyEnabled = true
 
             proguardFiles(
@@ -25,6 +25,10 @@ android {
 
     buildFeatures {
         compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = Config.composeVersion
     }
 
     compileOptions {
@@ -39,7 +43,7 @@ android {
 
 dependencies {
     implementation(project(Module.CORE))
-    implementation(Lib.Compose.COMPILER)
+    implementation(project(Module.Shared.UI))
     implementation(Lib.Compose.UI)
     implementation(Lib.Compose.MATERIAL)
     implementation(Lib.Compose.UI_PREVIEW)

@@ -1,6 +1,8 @@
 plugins {
     androidLibrary()
     kotlinAndroid()
+    hilt()
+    kapt()
 }
 
 android {
@@ -13,7 +15,7 @@ android {
     }
 
     buildTypes {
-        getByName(BuildType.RELEASE) {
+        getByName(BuildType.TYPE) {
             isMinifyEnabled = true
 
             proguardFiles(
@@ -25,6 +27,10 @@ android {
 
     buildFeatures {
         compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = Config.composeVersion
     }
 
     compileOptions {
@@ -39,10 +45,16 @@ android {
 
 dependencies {
     implementation(project(Module.CORE))
-    implementation(Lib.Compose.COMPILER)
+    implementation(project(Module.DOMAIN))
+    implementation(project(Module.Shared.UI))
+    implementation(Lib.Accompanist.PAGER)
+    implementation(Lib.Compose.FOUNDATION)
     implementation(Lib.Compose.UI)
     implementation(Lib.Compose.MATERIAL)
     implementation(Lib.Compose.UI_PREVIEW)
+    implementation(Lib.Dagger.HILT)
+    implementation(Lib.Dagger.VIEWMODEL)
+    kapt(Lib.Dagger.COMPILER)
     testImplementation(Lib.Test.Junit.JUNIT)
     androidTestImplementation(Lib.Test.Junit.EXT)
     androidTestImplementation(Lib.Test.Compose.UI)

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_img_onboarding">Изображение</string>
+    <string name="cd_btn_skip">Кнопка закрыть текущий экран</string>
+    <string name="btn_title_create_account">Создать аккаунт или войти</string>
+
+</resources>

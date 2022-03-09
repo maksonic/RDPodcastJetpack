@@ -1,6 +1,8 @@
 plugins {
     androidLibrary()
     kotlinAndroid()
+    hilt()
+    kapt()
 }
 
 android {
@@ -13,7 +15,7 @@ android {
     }
 
     buildTypes {
-        getByName(BuildType.RELEASE) {
+        getByName(BuildType.TYPE) {
             isMinifyEnabled = true
 
             proguardFiles(
@@ -33,4 +35,6 @@ android {
 }
 
 dependencies {
+    implementation(Lib.Dagger.HILT)
+    kapt(Lib.Dagger.COMPILER)
 }

@@ -13,7 +13,7 @@ android {
     }
 
     buildTypes {
-        getByName(BuildType.RELEASE) {
+        getByName(BuildType.TYPE) {
             isMinifyEnabled = true
 
             proguardFiles(
@@ -33,4 +33,7 @@ android {
 }
 
 dependencies {
+    implementation(Lib.AndroidX.ANNOTATION)
+    implementation(Lib.Compose.FOUNDATION)
+    implementation(Lib.Compose.UI)
 }

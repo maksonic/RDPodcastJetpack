@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PRIVACY POLICY BOTTOM SHEET-->
+    <string name="scr_title_privacy_policy">Политика конфиденциальности</string>
+    <string name="scr_title_teams_of_use">Пользовательское соглашение</string>
+
+
+    <!-- AUTH MODAL BOTTOM SHEET-->
+    <string name="btn_title_auth_google">Войти через Google аккаунт</string>
+    <string name="btn_title_auth_phone">Войти по номеру телефона</string>
+    <string name="btn_title_log_in">У меня уже есть аккаунт</string>
+
+</resources>

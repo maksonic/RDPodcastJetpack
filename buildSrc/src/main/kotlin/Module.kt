@@ -9,11 +9,9 @@ object Module {
     object Navigation {
         const val API = ":navigation:api"
         const val IMPL = ":navigation:impl"
-
     }
 
-
     object Shared {
-        const val THEME = ":shared:theme"
+        const val UI = ":shared:ui"
     }
 }

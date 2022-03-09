@@ -5,6 +5,7 @@ buildscript {
     }
     dependencies {
         classpath(BuildPlugin.ToolsGradle.init)
+        classpath(BuildPlugin.HiltGradle.init)
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
     }
 }

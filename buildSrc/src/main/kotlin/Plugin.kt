@@ -17,5 +17,11 @@ fun PluginDependenciesSpec.googleServices(): PluginDependencySpec =
 fun PluginDependenciesSpec.kotlinAndroid(): PluginDependencySpec =
     kotlin("android")
 
+fun PluginDependenciesSpec.hilt(): PluginDependencySpec =
+    id("dagger.hilt.android.plugin")
+
+fun PluginDependenciesSpec.kapt(): PluginDependencySpec =
+    id("kotlin-kapt")
+
 fun PluginDependenciesSpec.parcelize(): PluginDependencySpec =
     id("kotlin-parcelize")

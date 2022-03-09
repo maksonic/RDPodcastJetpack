@@ -2,6 +2,8 @@
 plugins {
     androidApp()
     kotlinAndroid()
+    kapt()
+    hilt()
 }
 
 android {
@@ -21,7 +23,7 @@ android {
     }
 
     buildTypes {
-        getByName(BuildType.RELEASE) {
+        getByName(BuildType.TYPE) {
             isMinifyEnabled = true
 
             proguardFiles(
@@ -44,20 +46,24 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = Config.composeVersion
     }
-    packagingOptions {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
 }
 
 dependencies {
 
+    implementation(project(Module.CORE))
+    implementation(project(Module.Navigation.API))
+    implementation(project(Module.Navigation.IMPL))
+    implementation(project(Module.DATA))
+    implementation(project(Module.DOMAIN))
+    implementation(project(Module.Shared.UI))
     implementation(project(Screen.MAIN))
     implementation(project(Screen.HOME))
     implementation(project(Screen.CATEGORIES))
     implementation(project(Screen.COLLECTION))
     implementation(project(Feature.ONBOARDING))
+    implementation(project(Feature.USER_AUTH))
+    implementation(Lib.Accompanist.NAVIGATION_MATERIAL)
+    implementation(Lib.Accompanist.SYSTEM_UI)
     implementation(Lib.AndroidX.APP_COMPAT)
     implementation(Lib.AndroidX.CORE_KTX)
     implementation(Lib.AndroidX.MATERIAL)
@@ -68,6 +74,9 @@ dependencies {
     implementation(Lib.Compose.UI)
     implementation(Lib.Compose.UI_PREVIEW)
     implementation(Lib.Lifecycle.RUNTIME_KTX)
+    implementation(Lib.Dagger.HILT)
+    kapt(Lib.Dagger.COMPILER)
+
 
     testImplementation(Lib.Test.Junit.JUNIT)
     androidTestImplementation(Lib.Test.Junit.EXT)

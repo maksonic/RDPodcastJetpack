@@ -8,6 +8,6 @@ import androidx.navigation.NavHostController
 fun NavHostController.safeNavigate(route: String) {
     if (this.currentDestination?.route != route)
         this.navigate(route)
-    else
-        return
+    else this.popBackStack()
 }
+

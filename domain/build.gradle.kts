@@ -1,6 +1,7 @@
 plugins {
     androidLibrary()
     kotlinAndroid()
+    kotlinParcelize()
     hilt()
     kapt()
 }
@@ -35,6 +36,7 @@ android {
 }
 
 dependencies {
+    implementation(Lib.JetBrains.COROUTINES_ANDROID)
     implementation(Lib.Dagger.HILT)
     kapt(Lib.Dagger.COMPILER)
 }

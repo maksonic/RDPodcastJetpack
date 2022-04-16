@@ -16,14 +16,6 @@ val LocalRDShape = staticCompositionLocalOf<RDShape> {
 }
 
 data class RDShape(
-    val padding4: Dp,
-    val padding8: Dp,
-    val padding16: Dp,
-    val padding24: Dp,
-    val padding32: Dp,
-    val padding54: Dp,
-    val padding64: Dp,
-    val padding72: Dp,
     val cornerNone: Shape,
     val cornerSmall: Shape,
     val cornerNormal: Shape,
@@ -32,14 +24,6 @@ data class RDShape(
 )
 
 val shapes = RDShape(
-    padding4 = 4.dp,
-    padding8 = 8.dp,
-    padding16 = 16.dp,
-    padding24 = 24.dp,
-    padding32 = 32.dp,
-    padding54 = 54.dp,
-    padding64 = 64.dp,
-    padding72 = 72.dp,
     cornerNone = RoundedCornerShape(0.dp),
     cornerSmall = RoundedCornerShape(4.dp),
     cornerNormal = RoundedCornerShape(8.dp),

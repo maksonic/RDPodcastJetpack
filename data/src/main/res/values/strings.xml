@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scr_title_privacy_policy">Политика конфиденциальности</string>
+    <string name="content_privacy_policy">Политика конфиденциальности контент</string>
+    <string name="scr_title_teams_of_use">Пользовательское соглашение</string>
+    <string name="content_teams_of_use">Пользовательское соглашение контент</string>
+</resources>

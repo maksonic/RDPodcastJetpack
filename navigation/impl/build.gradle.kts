@@ -45,12 +45,16 @@ android {
 
 dependencies {
     implementation(project(Module.Navigation.API))
+    implementation(project(Module.CORE))
+    implementation(project(Module.DOMAIN))
+    implementation(project(Module.Shared.UI))
     implementation(project(Screen.HOME))
     implementation(project(Screen.CATEGORIES))
     implementation(project(Screen.COLLECTION))
     implementation(project(Screen.MAIN))
     implementation(project(Feature.ONBOARDING))
     implementation(project(Feature.USER_AUTH))
+    implementation(Lib.Accompanist.NAVIGATION_ANIMATION)
     implementation(Lib.Accompanist.NAVIGATION_MATERIAL)
     implementation(Lib.Compose.MATERIAL)
     implementation(Lib.Compose.NAVIGATION)

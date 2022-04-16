@@ -9,7 +9,6 @@ import javax.inject.Inject
  * @Author: maksonic on 05.03.2022
  */
 class BaseOnboardingRepository @Inject constructor() : OnboardingRepository {
-
     override fun onboardingList() = listOf(
         Onboarding(
             "Добро пожаловать!",
@@ -33,3 +32,5 @@ class BaseOnboardingRepository @Inject constructor() : OnboardingRepository {
         )
     )
 }
+
+

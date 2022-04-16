@@ -1,6 +1,8 @@
 plugins {
     androidLibrary()
     kotlinAndroid()
+    hilt()
+    kapt()
 }
 
 android {
@@ -34,6 +36,11 @@ android {
 
 dependencies {
     implementation(Lib.AndroidX.ANNOTATION)
+    implementation(Lib.AndroidX.CORE_KTX)
+    implementation(Lib.AndroidX.DATASTORE)
     implementation(Lib.Compose.FOUNDATION)
     implementation(Lib.Compose.UI)
+    implementation(Lib.Dagger.HILT)
+    implementation(Lib.Dagger.VIEWMODEL)
+    kapt(Lib.Dagger.COMPILER)
 }

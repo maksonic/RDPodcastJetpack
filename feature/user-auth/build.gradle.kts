@@ -1,6 +1,8 @@
 plugins {
     androidLibrary()
     kotlinAndroid()
+    hilt()
+    kapt()
 }
 
 android {
@@ -43,10 +45,15 @@ android {
 
 dependencies {
     implementation(project(Module.CORE))
+    implementation(project(Module.DOMAIN))
     implementation(project(Module.Shared.UI))
     implementation(Lib.Compose.UI)
+    implementation(Lib.Accompanist.NAVIGATION_MATERIAL)
     implementation(Lib.Compose.MATERIAL)
     implementation(Lib.Compose.UI_PREVIEW)
+    implementation(Lib.Dagger.HILT)
+    implementation(Lib.Dagger.VIEWMODEL)
+    kapt(Lib.Dagger.COMPILER)
     testImplementation(Lib.Test.Junit.JUNIT)
     androidTestImplementation(Lib.Test.Junit.EXT)
     androidTestImplementation(Lib.Test.Compose.UI)

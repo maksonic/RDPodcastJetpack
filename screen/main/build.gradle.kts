@@ -48,6 +48,7 @@ dependencies {
     implementation(project(Screen.HOME))
     implementation(project(Screen.CATEGORIES))
     implementation(project(Screen.COLLECTION))
+    implementation(Lib.Accompanist.NAVIGATION_ANIMATION)
     implementation(Lib.Compose.NAVIGATION)
     implementation(Lib.Compose.UI)
     implementation(Lib.Compose.MATERIAL)

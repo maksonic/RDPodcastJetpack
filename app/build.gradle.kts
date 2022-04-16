@@ -62,7 +62,9 @@ dependencies {
     implementation(project(Screen.COLLECTION))
     implementation(project(Feature.ONBOARDING))
     implementation(project(Feature.USER_AUTH))
+    implementation(Lib.Accompanist.NAVIGATION_ANIMATION)
     implementation(Lib.Accompanist.NAVIGATION_MATERIAL)
+    implementation(Lib.Accompanist.INSETS)
     implementation(Lib.Accompanist.SYSTEM_UI)
     implementation(Lib.AndroidX.APP_COMPAT)
     implementation(Lib.AndroidX.CORE_KTX)
@@ -76,7 +78,6 @@ dependencies {
     implementation(Lib.Lifecycle.RUNTIME_KTX)
     implementation(Lib.Dagger.HILT)
     kapt(Lib.Dagger.COMPILER)
-
 
     testImplementation(Lib.Test.Junit.JUNIT)
     androidTestImplementation(Lib.Test.Junit.EXT)

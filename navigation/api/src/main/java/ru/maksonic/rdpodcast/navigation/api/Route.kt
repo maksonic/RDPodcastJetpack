@@ -8,7 +8,8 @@ import androidx.annotation.StringRes
 sealed class Route(val route: String) {
 
     interface BottomNavRoute {
-        val icon: Int
+        val selectedIcon: Int
+        val unselectedIcon: Int
 
         @get:StringRes
         val labelId: Int

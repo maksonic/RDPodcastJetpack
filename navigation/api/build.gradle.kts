@@ -1,6 +1,9 @@
 plugins {
     androidLibrary()
     kotlinAndroid()
+    hilt()
+    kapt()
+    kotlinParcelize()
 }
 
 android {
@@ -34,7 +37,10 @@ android {
 }
 
 dependencies {
+    implementation(project(Module.Shared.UI))
     implementation(Lib.AndroidX.ANNOTATION)
     implementation(Lib.Compose.NAVIGATION)
+    implementation(Lib.Dagger.HILT)
+    kapt(Lib.Dagger.COMPILER)
 
 }

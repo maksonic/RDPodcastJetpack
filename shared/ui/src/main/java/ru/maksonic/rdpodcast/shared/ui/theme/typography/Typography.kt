@@ -4,6 +4,8 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import ru.maksonic.rdpodcast.shared.ui.theme.RDTheme
+import ru.maksonic.rdpodcast.shared.ui.theme.color.RDColor
 
 /**
  * @Author: maksonic on 04.03.2022
@@ -17,7 +19,8 @@ data class RDTypography(
     val title: TextStyle,
     val header: TextStyle,
     val toolbarTitle: TextStyle,
-    val display: TextStyle
+    val display: TextStyle,
+    val caption: TextStyle
 )
 
 val typography = RDTypography(
@@ -41,4 +44,8 @@ val typography = RDTypography(
         fontSize = 34.sp,
         fontWeight = FontWeight.Bold
     ),
+    caption = TextStyle(
+        fontSize = 14.sp,
+        fontWeight = FontWeight.Bold,
+    )
 )

@@ -1,48 +1,57 @@
 package ru.maksonic.rdpodcast.shared.ui.component
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
-import androidx.compose.material.ButtonColors
 import androidx.compose.material.ButtonDefaults
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.composed
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.debugInspectorInfo
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import ru.maksonic.rdpodcast.core.*
 import ru.maksonic.rdpodcast.shared.ui.theme.RDTheme
 
 /**
  * @Author: maksonic on 05.03.2022
  */
 @Composable
-fun PrimaryButton(action: () -> Unit, title: Int, modifier: Modifier = Modifier) {
+fun PrimaryButton(
+    action: () -> Unit,
+    modifier: Modifier = Modifier,
+    title: Int,
+    clickTimeOut: Long = 300) {
+
+    val scope = rememberCoroutineScope()
+    val disabledElevation = RDTheme.elevation.elevationDisable
+    var isEnabled by rememberSaveable {
+        mutableStateOf(true)
+    }
+
     Button(
-        onClick = action,
+        onClick = {
+            scope.launch {
+                  isEnabled = false
+                  action.invoke()
+                  delay(clickTimeOut)
+                  isEnabled = true
+              }
+        },
         colors = ButtonDefaults.buttonColors(RDTheme.color.primary),
         shape = RDTheme.shape.cornerNormal,
         elevation = ButtonDefaults.elevation(
-            defaultElevation = 0.dp,
-            pressedElevation = 0.dp,
-            disabledElevation = 0.dp
+            defaultElevation = disabledElevation,
+            pressedElevation = disabledElevation,
+            disabledElevation = disabledElevation
         ),
         modifier = modifier
             .fillMaxWidth()
             .height(RDTheme.componentSize.btnPrimaryHeight)
             .padding(
-                start = RDTheme.shape.padding16,
-                end = RDTheme.shape.padding16
+                start = RDTheme.padding.dp16,
+                end = RDTheme.padding.dp16
             )
 
     ) {

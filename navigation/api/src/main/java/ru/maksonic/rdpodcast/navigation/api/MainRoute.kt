@@ -7,17 +7,20 @@ object MainRoute : Route("main") {
     object MainScreen : Route("main.screen")
 
     object HomeScreen : Route("main.home"), BottomNavRoute {
-        override val icon: Int = R.drawable.ic_bottom_nav_home
+        override val selectedIcon: Int = R.drawable.id_rd_filled
+        override val unselectedIcon: Int = R.drawable.ic_rd_outlined
         override val labelId: Int = R.string.scr_home
     }
 
     object CategoriesScreen : Route("main.categories"), BottomNavRoute {
-        override val icon: Int = R.drawable.ic_bottom_nav_categories
+        override val selectedIcon: Int = R.drawable.ic_category_filled
+        override val unselectedIcon: Int = R.drawable.ic_category_outlined
         override val labelId: Int = R.string.scr_categories
     }
 
     object CollectionsScreen : Route("main.collections"), BottomNavRoute {
-        override val icon: Int = R.drawable.ic_bottom_nav_collections
+        override val selectedIcon: Int = R.drawable.ic_collections_filled
+        override val unselectedIcon: Int = R.drawable.ic_collections_outlined
         override val labelId: Int = R.string.scr_collections
     }
 }

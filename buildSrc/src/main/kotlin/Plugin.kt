@@ -23,5 +23,5 @@ fun PluginDependenciesSpec.hilt(): PluginDependencySpec =
 fun PluginDependenciesSpec.kapt(): PluginDependencySpec =
     id("kotlin-kapt")
 
-fun PluginDependenciesSpec.parcelize(): PluginDependencySpec =
+fun PluginDependenciesSpec.kotlinParcelize(): PluginDependencySpec =
     id("kotlin-parcelize")

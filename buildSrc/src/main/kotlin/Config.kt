@@ -4,7 +4,7 @@ import org.gradle.api.JavaVersion
  * @Author: maksonic on 04.03.2022
  */
 object Config {
-    const val composeVersion = "1.2.0-alpha04"
+    const val composeVersion = "1.2.0-alpha07"
     const val kotlinVersion = "1.6.10"
     const val appId = "ru.maksonic.rdpodcast"
     const val compileSdk = 32

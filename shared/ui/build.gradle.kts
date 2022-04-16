@@ -1,6 +1,7 @@
 plugins {
     androidLibrary()
     kotlinAndroid()
+    kotlinParcelize()
 }
 
 android {
@@ -42,7 +43,9 @@ android {
 }
 
 dependencies {
+    implementation(project(Module.CORE))
     implementation(Lib.AndroidX.MATERIAL)
+    implementation(Lib.Accompanist.SYSTEM_UI)
     implementation(Lib.Compose.UI)
     implementation(Lib.Compose.MATERIAL)
     implementation(Lib.Compose.UI_PREVIEW)

@@ -5,5 +5,9 @@ package ru.maksonic.rdpodcast.navigation.api
  */
 object AuthRoute : Route("auth") {
     object AuthBottomSheet : Route("auth.bottom_sheet")
-    object PrivacyPolicy : Route("auth.privacy")
+
+    object PrivacyPolicy : Route("auth.privacy") {
+        const val args = "/{passed_privacy_or_terms_key}"
+        fun buildArgsRoute(id: String) = "${this.route}/${id}"
+    }
 }
